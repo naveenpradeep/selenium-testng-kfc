@@ -22,7 +22,6 @@ pipeline {
         stage('Archive Reports') {
             steps {
                 junit '**/target/surefire-reports/*.xml'
-                archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
             }
         }
     }
